@@ -1,25 +1,30 @@
-import logo from './logo.svg';
+import React,{useState} from 'react'
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
+  const [state, setState] = useState([]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <div className="toDoContainer">
+<div className="toDoHeader">
+  <h1>Hello ToDoList</h1>
+  <div style={{display:'flex'}}>
+  <input value={state} onChange={ (e) => setState(e.target.value)} className="form-control" type="text" ></input>
+  <button onClick={(e)=> {
+    console.log(state);
+  }} type="button" className="btn btn-primary">Add  
+  </button>
+  </div>
+  
+  {/* <i class="bi bi-x-lg"></i> */}
+
+</div>
+</div>
     </div>
-  );
+
+);
 }
 
 export default App;
