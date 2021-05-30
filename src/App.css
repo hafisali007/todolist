@@ -83,3 +83,15 @@
 .todo-item.editing .todo-actions .edit-icon {
     display: none !important;
 }
+
+input[type=checkbox] {
+  font-family: Font-Awesome !important;
+  display: inline-block !important;
+  color: #007bff !important;
+}
+
+input[type=checkbox] { content: "\f096" !important; } /* unchecked icon */
+input[type=checkbox] { letter-spacing: 10px !important; } /* space between checkbox and label */
+
+input[type=checkbox]:checked { content: "\f046" !important; } /* checked icon */
+input[type=checkbox]:checked { letter-spacing: 5px !important; } /* allow space for check mark */
