@@ -95,3 +95,11 @@ input[type=checkbox] { letter-spacing: 10px !important; } /* space between check
 
 input[type=checkbox]:checked { content: "\f046" !important; } /* checked icon */
 input[type=checkbox]:checked { letter-spacing: 5px !important; } /* allow space for check mark */
+
+
+@supports not (zoom:2) {
+	 input[type=checkbox]{
+		transform: scale(2);
+		/* margin: 15px; */
+	}
+}
